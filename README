@@ -1,0 +1,8 @@
+根据业务需要划分目录结构说明
+
+admin 管理后台
+crontab 自动脚本
+doc 开发文档
+system 框架
+taobao 淘宝应用展示950定宽
+www 网站首页
