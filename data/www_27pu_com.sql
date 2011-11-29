@@ -73,7 +73,11 @@ DROP TABLE IF EXISTS `good_categorys`;
 CREATE TABLE `good_categorys` (
   `gc_id` int(11) NOT NULL AUTO_INCREMENT,
   `parent_id` int(11) DEFAULT NULL,
-  `name` varchar(56) DEFAULT NULL,
+  `name_en` varchar(56) DEFAULT NULL,
+  `name_cn` varchar(56) DEFAULT NULL,
+  `alias_cn` varchar(56) DEFAULT NULL,
+  `recommend` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0:否,1:是',
+  `hot` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0:否,1:是',
   `rule` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`gc_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -119,7 +123,7 @@ CREATE TABLE `members` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
   `nick` varchar(56) DEFAULT NULL,
   `mail` varchar(56) DEFAULT NULL,
-  `from` tinyint(1) DEFAULT '0' COMMENT '0本站，1淘宝，2腾讯',
+  `from` tinyint(1) DEFAULT '0' COMMENT '0本站,1淘宝,2腾讯',
   `insert_dt` datetime DEFAULT NULL,
   `insert_ip` varchar(15) DEFAULT NULL,
   `last_dt` datetime DEFAULT NULL,
@@ -139,7 +143,7 @@ CREATE TABLE `stores` (
   `sid` int(11) NOT NULL AUTO_INCREMENT,
   `gc_id` int(11) DEFAULT NULL,
   `store_name` varchar(56) DEFAULT NULL,
-  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0:否,1:是',
   `fav_num` int(11) NOT NULL,
   `insert_dt` datetime DEFAULT NULL,
   PRIMARY KEY (`sid`)

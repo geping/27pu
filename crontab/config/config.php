@@ -23,7 +23,7 @@ define('PU_APPKEY', 12222468);
 define('PU_APPSECRET', '62ec955a5723e5a82639d57276c13116');
 
 // 数据库配置
-define('PU_HOSTNAME', '');
-define('PU_USERNAME', '');
-define('PU_PASSWORD', '');
-define('PU_DATABASE', '');
+define('PU_HOSTNAME', '61.155.161.140');
+define('PU_USERNAME', 'root');
+define('PU_PASSWORD', 'x201cto');
+define('PU_DATABASE', 'www_27pu_com');
